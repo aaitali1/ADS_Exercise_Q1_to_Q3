@@ -1,0 +1,140 @@
+
+Attaching package: 'dplyr'
+
+The following objects are masked from 'package:stats':
+
+    filter, lag
+
+The following objects are masked from 'package:base':
+
+    intersect, setdiff, setequal, union
+
+=== DS Domain Summary ===
+Dimensions: 560 rows x 12 columns
+
+=== Variable structure ===
+tibble [560 x 12] (S3: tbl_df/tbl/data.frame)
+ $ STUDYID : chr [1:560] "CDISCPILOT01" "CDISCPILOT01" "CDISCPILOT01" "CDISCPILOT01" ...
+ $ DOMAIN  : chr [1:560] "DS" "DS" "DS" "DS" ...
+ $ USUBJID : chr [1:560] "01-701-1015" "01-701-1015" "01-701-1023" "01-701-1023" ...
+ $ DSSEQ   : int [1:560] 1 2 1 2 1 2 1 2 1 2 ...
+ $ DSTERM  : chr [1:560] "Protocol Completed" "Randomized" "Adverse Event" "Randomized" ...
+ $ DSDECOD : chr [1:560] "COMPLETED" "RANDOMIZED" "ADVERSE EVENT" "RANDOMIZED" ...
+ $ DSCAT   : chr [1:560] "DISPOSITION EVENT" "PROTOCOL MILESTONE" "DISPOSITION EVENT" "PROTOCOL MILESTONE" ...
+ $ VISITNUM: chr [1:560] "13" "3" "5" "3" ...
+ $ VISIT   : chr [1:560] "WEEK 26" "BASELINE" "WEEK 4" "BASELINE" ...
+ $ DSDTC   : 'iso8601' chr [1:560] "2014-07-02" "2014-01-02" "2012-09-02" "2012-08-05" ...
+ $ DSSTDTC : Date[1:560], format: "2014-07-02" "2014-01-02" ...
+ $ DSSTDY  : int [1:560] 182 1 29 1 180 1 1 28 183 1 ...
+
+=== First 20 rows ===
+      STUDYID DOMAIN     USUBJID DSSEQ
+ CDISCPILOT01     DS 01-701-1015     1
+ CDISCPILOT01     DS 01-701-1015     2
+ CDISCPILOT01     DS 01-701-1023     1
+ CDISCPILOT01     DS 01-701-1023     2
+ CDISCPILOT01     DS 01-701-1028     1
+ CDISCPILOT01     DS 01-701-1028     2
+ CDISCPILOT01     DS 01-701-1033     1
+ CDISCPILOT01     DS 01-701-1033     2
+ CDISCPILOT01     DS 01-701-1034     1
+ CDISCPILOT01     DS 01-701-1034     2
+ CDISCPILOT01     DS 01-701-1047     1
+ CDISCPILOT01     DS 01-701-1047     2
+ CDISCPILOT01     DS 01-701-1057     1
+ CDISCPILOT01     DS 01-701-1097     1
+ CDISCPILOT01     DS 01-701-1097     2
+ CDISCPILOT01     DS 01-701-1111     1
+ CDISCPILOT01     DS 01-701-1111     2
+ CDISCPILOT01     DS 01-701-1115     1
+ CDISCPILOT01     DS 01-701-1115     2
+ CDISCPILOT01     DS 01-701-1118     1
+                                                          DSTERM
+                                              Protocol Completed
+                                                      Randomized
+                                                   Adverse Event
+                                                      Randomized
+                                              Protocol Completed
+                                                      Randomized
+                                                      Randomized
+ Sponsor Decision (Study or Patient Discontinued by the Sponsor)
+                                              Protocol Completed
+                                                      Randomized
+                                                   Adverse Event
+                                                      Randomized
+                                                  Screen Failure
+                                              Protocol Completed
+                                                      Randomized
+                                                   Adverse Event
+                                                      Randomized
+                                                   Adverse Event
+                                                      Randomized
+                                              Protocol Completed
+                     DSDECOD              DSCAT VISITNUM             VISIT
+                   COMPLETED  DISPOSITION EVENT       13           WEEK 26
+                  RANDOMIZED PROTOCOL MILESTONE        3          BASELINE
+               ADVERSE EVENT  DISPOSITION EVENT        5            WEEK 4
+                  RANDOMIZED PROTOCOL MILESTONE        3          BASELINE
+                   COMPLETED  DISPOSITION EVENT       13           WEEK 26
+                  RANDOMIZED PROTOCOL MILESTONE        3          BASELINE
+                  RANDOMIZED PROTOCOL MILESTONE        3          BASELINE
+ STUDY TERMINATED BY SPONSOR  DISPOSITION EVENT        5            WEEK 4
+                   COMPLETED  DISPOSITION EVENT       13           WEEK 26
+                  RANDOMIZED PROTOCOL MILESTONE        3          BASELINE
+               ADVERSE EVENT  DISPOSITION EVENT        6 AMBUL ECG REMOVAL
+                  RANDOMIZED PROTOCOL MILESTONE        3          BASELINE
+              SCREEN FAILURE  DISPOSITION EVENT        1       SCREENING 1
+                   COMPLETED  DISPOSITION EVENT       13           WEEK 26
+                  RANDOMIZED PROTOCOL MILESTONE        3          BASELINE
+               ADVERSE EVENT  DISPOSITION EVENT        4            WEEK 2
+                  RANDOMIZED PROTOCOL MILESTONE        3          BASELINE
+               ADVERSE EVENT  DISPOSITION EVENT        8            WEEK 8
+                  RANDOMIZED PROTOCOL MILESTONE        3          BASELINE
+                   COMPLETED  DISPOSITION EVENT       13           WEEK 26
+      DSDTC    DSSTDTC DSSTDY
+ 2014-07-02 2014-07-02    182
+ 2014-01-02 2014-01-02      1
+ 2012-09-02 2012-09-02     29
+ 2012-08-05 2012-08-05      1
+ 2014-01-14 2014-01-14    180
+ 2013-07-19 2013-07-19      1
+ 2014-03-18 2014-03-18      1
+ 2014-04-14 2014-04-14     28
+ 2014-12-30 2014-12-30    183
+ 2014-07-01 2014-07-01      1
+ 2013-03-29 2013-03-29     46
+ 2013-02-12 2013-02-12      1
+ 2013-12-20 2013-12-20     NA
+ 2014-07-09 2014-07-09    190
+ 2014-01-01 2014-01-01      1
+ 2012-09-17 2012-09-17     11
+ 2012-09-07 2012-09-07      1
+ 2013-01-23 2013-01-23     55
+ 2012-11-30 2012-11-30      1
+ 2014-09-09 2014-09-09    182
+
+=== DSDECOD frequency ===
+
+              ADVERSE EVENT                   COMPLETED 
+                         92                         110 
+                      DEATH            LACK OF EFFICACY 
+                          3                           4 
+          LOST TO FOLLOW-UP          PHYSICIAN DECISION 
+                          2                           3 
+         PROTOCOL VIOLATION                  RANDOMIZED 
+                          6                         254 
+             SCREEN FAILURE STUDY TERMINATED BY SPONSOR 
+                         52                           7 
+      WITHDRAWAL BY SUBJECT 
+                         27 
+
+=== DSCAT frequency ===
+
+ DISPOSITION EVENT PROTOCOL MILESTONE 
+               306                254 
+
+=== DSSTDY summary ===
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA's 
+   1.00    1.00    1.00   61.04  140.25  213.00      52 
+
+=== DS domain saved to question_1_sdtm/ds.csv ===
